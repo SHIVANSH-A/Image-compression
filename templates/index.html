@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PCA Image Compressor</title>
+</head>
+<body>
+  <h2>Upload Image for PCA Compression</h2>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <input type="submit" value="Upload">
+  </form>
+
+  {% if orig_path %}
+    <h3>Original Image</h3>
+    <img src="{{ orig_path }}" width="300"><br>
+    <p>Size: {{ orig_size }} KB</p>
+    <p>Shape: {{ orig_shape }}</p>
+  {% endif %}
+
+  {% if comp_path %}
+    <h3>Compressed Image</h3>
+    <img src="{{ comp_path }}" width="300"><br>
+    <p>Size: {{ comp_size }} KB</p>
+    <p>Shape: {{ comp_shape }}</p>
+    <p>Compression: {{ compression_percent }}%</p>
+  {% endif %}
+
+  {% if bar_plot %}
+    <h3>Bar Plot of Variance</h3>
+    <img src="{{ bar_plot }}" width="600">
+  {% endif %}
+
+  {% if line_plot %}
+    <h3>Explained Variance over PCs</h3>
+    <img src="{{ line_plot }}" width="600">
+  {% endif %}
+</body>
+</html>
