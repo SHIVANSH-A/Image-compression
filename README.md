@@ -1,4 +1,3 @@
-```markdown
 # 📦 PCA Image Compressor (Flask App)
 
 This Flask web app allows users to upload an image, compress it using PCA (Principal Component Analysis), visualize the explained variance, and compare original vs. compressed image size and shape.
@@ -58,3 +57,4 @@ python app.py
 ```
 
 Then open your browser at [http://127.0.0.1:5000](http://127.0.0.1:5000)
+```
