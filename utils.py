@@ -120,7 +120,7 @@ def pca_transform(pca_channel, n_components):
     return compressed_image
 
 # ----------------------------
-def full_pca_process(img_path, output_dir, plot_dir, n_components=120):
+def full_pca_process(img_path, output_dir, plot_dir, n_components=1200):
     # Step 1: Original stats
     data_dict_ori = img_data(img_path)
     orig_size = data_dict_ori['img_size_kb']
